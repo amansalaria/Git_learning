@@ -1,121 +1,154 @@
-Git
-Version Control System - It is developed to co-ordinate the work among the developers.
-Features of GIT
-Open Source – GPL license
-Scalable- large number of users git can easily handle
-Distributed- on another machine user can easily clone
-Security-Secure, uses SHA1 (Secure Hash Function) to name and identify the objects
-Speed-fast, most of the operation on local repo
-Branching and Merging- great feature, multiple branches so that other developer work together.
-Staging Area- preview of next commit
-. 
-Benefits of using GIT
-	 
-Installing GIT on Windows
-https://git-scm.com/downloads
-download and install for this website
+# Git: Version Control System
 
+Git is a powerful version control system developed to coordinate work among developers. It helps manage changes to source code over time, ensuring collaboration and efficiency.
 
+## Features of Git
 
-$ git –version
+- **Open Source**: Git is distributed under the GPL license, making it free to use and modify.
+- **Scalable**: Git can handle a large number of users and repositories efficiently.
+- **Distributed**: Users can clone repositories to their local machines, allowing for offline work and redundancy.
+- **Security**: Git uses SHA1 (Secure Hash Algorithm 1) to name and identify objects, ensuring data integrity.
+- **Speed**: Most operations are performed locally, making Git very fast.
+- **Branching and Merging**: Git supports multiple branches, allowing developers to work on different features simultaneously and merge changes seamlessly.
+- **Staging Area**: Provides a preview of the next commit, allowing for better control over changes.
 
-Register user with git
-•	git config --global user.name "Aman"
-•	git config --global user.email amansalaria11@gmail.com
+## Benefits of Using Git
 
-user is successfully registered
-•	git config --list
+- **Collaboration**: Facilitates teamwork by allowing multiple developers to work on the same project.
+- **Version History**: Keeps a detailed history of changes, making it easy to revert to previous versions.
+- **Backup**: Distributed nature ensures that each clone is a full backup of the repository.
+- **Flexibility**: Supports various workflows and branching strategies.
 
-Important Terminology
-•	Branch- repository diverges from main working directory.
-•	Checkout- checkout is used for the act of switching between different versions of a target entity
-•	Clone: making copy from server.
-•	Merge – combining branches
-•	Origin- remote repository from a project was initially cloned
-•	Pull- receive the data from Server (GITHUB)
-•	Push- Upload local repository to sever.
-•	Git Ignore-use for intentionally untrack the fine
-•	Git Diff- shows changes between commit, working tree etc.
-•	Git Rm- for removing files.
-Etc.
+## Installing Git on Windows
 
-Let start
-Create a local repository:
+1. Visit Git Downloads.
+2. Download and install Git from the website.
 
+## Basic Git Commands
+
+### Check Git Version
+```bash
+$ git --version
+
+**Register User with Git**
+$ git config --global user.name "Aman"
+$ git config --global user.email "amansalaria11@gmail.com"
+
+**Verify the configuration:**
+$ git config --list
+
+**Important Terminology**
+**Branch**: A separate line of development in a repository.
+**Checkout**: Switching between different versions or branches.
+**Clone**: Creating a copy of a repository from a server.
+**Merge**: Combining changes from different branches.
+**Origin**: The default name for a remote repository.
+**Pull**: Fetching and integrating changes from a remote repository.
+**Push**: Uploading local changes to a remote repository.
+.**gitignore**: A file specifying which files and directories to ignore.
+**git** diff: Shows changes between commits, working directory, etc.
+**git** rm: Removes files from the working directory and staging area.
+
+**Getting Started with Git**
+**Create a Local Repository**
 $ git init
 
-Make copy
+**Clone a Repository**
+$ git clone <repository_url>
 
-$ git clone
+**Adding Files to Staging Area**
+$ git add <file>  # Single file
+$ git add -A      # All files
 
-Adding file to staging area
-
-$ git add file  //single file
-$ git add -A  //all files
-
-See the status of file
+**Check the Status of Files**
 $ git status
 
-Committing the change
-$ git commit -m “comment”
-Record the file permanently
-Track the changes that have not been staged
-$git diff
-Track the changes that have staged but not committed
-$git diff –-staged
-Track the changes after committing a file:
-$git diff HEAD
-Show the objects
+**Committing Changes**
+$ git commit -m "commit message"
+
+**Tracking Changes**
+Changes not staged:
+$ git diff
+
+**Changes staged but not committed**
+$ git diff --staged
+
+**Changes after committing:**
+$ git diff HEAD
+
+**Show Objects**
+$ git show
+**Show Objects**
 $ git show
 
-Commit History
-Display the most recent commits and status of the head.
-$git log
-$git log -p -2
-Output as one commit per line
-$git log –-oneline
-Display the files that have been modified
-$git log –-stat
-Display the modification on each line of a file:
-$ git blame <file name>
-Ignoring Files
-Create. gitignore file
+**Commit History
+Display recent commits:**
+$ git log
 
-Branching
-List a branch
-$git branch –-list
-Create Branch
-$git branch [name]
-Delete Branch
-$git branch -d [name]
-Renaming the branch
-$git branch -m [old name] [new name]
-Git checkout
-Switch between branch in a repository
-$git checkout [branch name]
-Create new branch and switch to it
-$git checkout -b [branch name]
+**Show changes introduced in each commit:**
+$ git log -p -2
 
-Merging
-Merge the branches
-$git merge [branch name]
+**Output one commit per line:**
+$ git log --oneline
 
-Working on Remote
-$git remote -v
-Add remote to repository
-$git remote add [name] [remote url]
+**Display files modified in each commit:**
+$ git log --stat
 
-Remove from
-Delete the file
-$git rm [file]
-Only remove file from staging area
-$git rm –-cached [file]
+**Show modifications on each line of a file:**
+$ git blame <file>
 
-GITHUB
-Repository Hosting Service
-Remote Repository:
-Git remote add name url
-Git remote -v
-Git push -u origin master
+**Ignoring Files**
+Create a .gitignore file to specify files and directories to ignore.
 
-Git remote set-url origin url
+**Branching
+List branches:**
+$ git branch --list
+
+**Create a new branch:**
+$ git branch <name>
+
+**Delete a branch:**
+$ git branch -d <name>
+
+**Rename a branch:**
+$ git branch -m <old_name> <new_name>
+
+**Switching Branches
+Switch to a branch:**
+$ git checkout <branch_name>
+
+**Create and switch to a new branch:**
+$ git checkout -b <branch_name>
+
+**Merging Branches
+Merge a branch into the current branch:**
+$ git merge <branch_name>
+
+**Working with Remote Repositories
+View remote repositories:**
+$ git remote -v
+
+**Add a remote repository:**
+$ git remote add <name> <remote_url>
+
+**Removing Files
+Delete a file from the working directory and staging area:**
+$ git rm <file>
+
+**Remove a file only from the staging area:**
+$ git rm --cached <file>
+
+**GitHub: Repository Hosting Service
+Working with Remote Repositories**
+**Add a remote repository:**
+$ git remote add origin <url>
+
+**Verify remote repositories:**
+$ git remote -v
+
+**Push changes to the remote repository:**
+$ git push -u origin master
+
+**Change the URL of a remote repository:**
+$ git remote set-url origin <new_url>
+
