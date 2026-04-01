@@ -19,7 +19,8 @@ Git is a powerful version control system developed to coordinate work among deve
 - **Backup**: Distributed nature ensures that each clone is a full backup of the repository.
 - **Flexibility**: Supports various workflows and branching strategies.
 - Testing
-
+- Testing 2
+- Testing 3
 ## Installing Git on Windows
 
 1. Visit Git Downloads.
