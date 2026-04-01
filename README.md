@@ -18,6 +18,7 @@ Git is a powerful version control system developed to coordinate work among deve
 - **Version History**: Keeps a detailed history of changes, making it easy to revert to previous versions.
 - **Backup**: Distributed nature ensures that each clone is a full backup of the repository.
 - **Flexibility**: Supports various workflows and branching strategies.
+- Testing
 
 ## Installing Git on Windows
 
